@@ -1,0 +1,77 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Sprites/White/whitebutton.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Button.gd" type="Script" id=2]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 16, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ SubResource( 1 ) ],
+"loop": true,
+"name": "activate",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 7, 4 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 6, 1 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 111, 33 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 111, 3.5 )
+
+[node name="WhiteButton" type="StaticBody2D"]
+collision_layer = 1024
+collision_mask = 2055
+script = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 4 )
+shape = SubResource( 4 )
+
+[node name="activation" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2055
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="activation"]
+position = Vector2( 0, -1 )
+shape = SubResource( 5 )
+
+[node name="activationWall" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 32768
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="activationWall"]
+position = Vector2( 0, -25 )
+shape = SubResource( 6 )
+disabled = true
+
+[node name="NotactivayionWall" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NotactivayionWall"]
+position = Vector2( 0, -54.5 )
+shape = SubResource( 7 )
+
+[connection signal="body_entered" from="activation" to="." method="_on_activation_body_entered"]
+[connection signal="body_exited" from="activation" to="." method="_on_activation_body_exited"]
+[connection signal="body_entered" from="activationWall" to="." method="_on_activationWall_body_entered"]
+[connection signal="body_entered" from="NotactivayionWall" to="." method="_on_NotactivayionWall_body_entered"]
