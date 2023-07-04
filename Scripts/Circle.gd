@@ -19,12 +19,12 @@ func get_input():
 		$AnimationPlayer.play("jump")
 	elif right:
 		velocity.x += speed
-		rotation_degrees += 10
+		$Sprite.rotation_degrees += 10
 		if !is_on_floor():
 			$Sprite.flip_h = false
 	elif left:
 		velocity.x -= speed
-		rotation_degrees -= 10
+		$Sprite.rotation_degrees -= 10
 		if !is_on_floor():
 			$Sprite.flip_h = true
 

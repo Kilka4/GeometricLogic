@@ -26,9 +26,11 @@ func get_input():
 		velocity.x -= speed
 		$Sprite.flip_h = true
 	if !is_on_floor() && right_rotation:
-		rotation_degrees += 45
+		$Sprite.rotation_degrees += 45
+		$CollisionShape2D.rotation_degrees += 45
 	if !is_on_floor() && left_rotation:
-		rotation_degrees -= 45
+		$Sprite.rotation_degrees -= 45
+		$CollisionShape2D.rotation_degrees -= 45
 
 func _physics_process(delta):
 	get_input()

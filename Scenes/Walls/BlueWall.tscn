@@ -6,6 +6,7 @@
 extents = Vector2( 2.5, 16 )
 
 [node name="BlueWall" type="StaticBody2D" groups=["Wall"]]
+z_index = -1
 collision_layer = 65536
 
 [node name="Sprite" type="Sprite" parent="."]

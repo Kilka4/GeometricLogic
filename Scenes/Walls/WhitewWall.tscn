@@ -1,13 +1,16 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Sprites/White/WhiteWall.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Walls/WhitewWall.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 2.5, 16 )
 
-[node name="WhitewWall" type="StaticBody2D" groups=["Wall"]]
+[node name="WhitewWall" type="StaticBody2D"]
+z_index = -1
 collision_layer = 32768
 collision_mask = 7
+script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
