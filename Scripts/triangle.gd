@@ -32,9 +32,15 @@ func get_input():
 		$Sprite.rotation_degrees -= 60
 		$CollisionPolygon2D.rotation_degrees -= 60
 
+
+var stop_on_slope: bool = false
+var max_slides: int = 4
+var floor_max_angle: float = 0.785398
+var mass: float = 1
+
 func _physics_process(delta):
 	get_input()
 	velocity.y += gravity * delta
 	if jumping && is_on_floor():
 		jumping = false
-	velocity = move_and_slide(velocity, Vector2(0, -1))
+	velocity = move_and_slide(velocity, Vector2(0, -1), stop_on_slope, max_slides, floor_max_angle, true)

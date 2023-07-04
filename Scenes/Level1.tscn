@@ -27,6 +27,7 @@ position = Vector2( 952, 456 )
 
 [node name="WhitewWall" parent="." instance=ExtResource( 8 )]
 position = Vector2( 1031, 448 )
+triggering_node_paths = [ NodePath("../WhiteLever") ]
 
 [node name="WhitewWall2" parent="." instance=ExtResource( 8 )]
 position = Vector2( 1927, 448 )
@@ -63,7 +64,7 @@ tile_data = PoolIntArray( 1310804, 0, 131072, 1310805, 0, 131072, 1310806, 0, 13
 environment = SubResource( 1 )
 
 [node name="Triangle" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1872, 452 )
+position = Vector2( 1872, 455 )
 
 [node name="Octagon" parent="." instance=ExtResource( 7 )]
 position = Vector2( 651, 455 )
@@ -90,8 +91,6 @@ position = Vector2( 872, 456 )
 position = Vector2( 1784, 456 )
 gravity_scale = 2.0
 
-[connection signal="Activated" from="WhiteLever" to="WhitewWall" method="_on_WhiteLever_Activated"]
-[connection signal="Disabled" from="WhiteLever" to="WhitewWall" method="_on_WhiteLever_Disabled"]
 [connection signal="Activated" from="WhiteButton" to="WhitewWall2" method="_on_WhiteButton_Activated"]
 [connection signal="Disabled" from="WhiteButton" to="WhitewWall2" method="_on_WhiteButton_Disabled"]
 [connection signal="Player_entered" from="WhiteKey" to="WhiteLockedWall" method="_on_WhiteKey_Player_entered"]
