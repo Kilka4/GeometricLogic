@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Scenes/Triangle.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Tilesets/TilesetBlue.tscn" type="PackedScene" id=2]
@@ -13,6 +13,9 @@
 [ext_resource path="res://Scenes/Mechanisms/WhiteButton.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/Keys/WhiteKey.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/Walls/WhiteLockedWall.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/Camerafor3players.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/Circle.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scenes/Square.tscn" type="PackedScene" id=16]
 
 [sub_resource type="Environment" id=1]
 background_mode = 4
@@ -63,9 +66,6 @@ tile_data = PoolIntArray( 1310804, 0, 131072, 1310805, 0, 131072, 1310806, 0, 13
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 1 )
 
-[node name="Triangle" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1872, 455 )
-
 [node name="Octagon" parent="." instance=ExtResource( 7 )]
 position = Vector2( 651, 455 )
 
@@ -89,7 +89,21 @@ position = Vector2( 872, 456 )
 
 [node name="WhiteBox" parent="." instance=ExtResource( 10 )]
 position = Vector2( 1784, 456 )
-gravity_scale = 2.0
+
+[node name="Triangle" parent="." instance=ExtResource( 1 )]
+position = Vector2( 414, -13 )
+
+[node name="Circle" parent="." instance=ExtResource( 15 )]
+position = Vector2( 465, -10 )
+
+[node name="Square" parent="." instance=ExtResource( 16 )]
+position = Vector2( 506, -10 )
+
+[node name="Camerafor3players" parent="." instance=ExtResource( 14 )]
+position = Vector2( 464, -20 )
+player_1 = NodePath("../Triangle")
+player_2 = NodePath("../Circle")
+player_3 = NodePath("../Square")
 
 [connection signal="Activated" from="WhiteButton" to="WhitewWall2" method="_on_WhiteButton_Activated"]
 [connection signal="Disabled" from="WhiteButton" to="WhitewWall2" method="_on_WhiteButton_Disabled"]

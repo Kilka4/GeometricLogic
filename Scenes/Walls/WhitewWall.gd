@@ -41,6 +41,3 @@ func _on_WhiteButton_Disabled():
 func _on_WhiteLever_Disabled():
 	for i in 1:
 			global_position.y += 32
-
-
-

@@ -31,10 +31,6 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
 
-[node name="Camera2D" type="Camera2D" parent="."]
-current = true
-zoom = Vector2( 0.25, 0.25 )
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 playback_speed = 5.0
 anims/jump = SubResource( 3 )

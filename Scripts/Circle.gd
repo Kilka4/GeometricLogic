@@ -3,6 +3,11 @@ extends KinematicBody2D
 var speed = 150
 var jump_speed = -400
 var gravity = 1200
+var stop_on_slope: bool = false
+var max_slides: int = 4
+var floor_max_angle: float = 0.785398
+var mass: float = 1
+var inertia = 3
 
 var velocity = Vector2()
 var jumping = false
@@ -33,4 +38,8 @@ func _physics_process(delta):
 	velocity.y += gravity * delta
 	if jumping && is_on_floor():
 		jumping = false
-	velocity = move_and_slide(velocity, Vector2(0, -1))
+	velocity = move_and_slide(velocity, Vector2(0, -1), stop_on_slope, max_slides, floor_max_angle, false)
+	for index in get_slide_count():
+		var collision = get_slide_collision(index)
+		if collision.collider.is_in_group("Body"):
+			collision.collider.apply_central_impulse(-collision.normal * inertia)
