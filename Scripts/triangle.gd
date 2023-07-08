@@ -47,3 +47,4 @@ func _physics_process(delta):
 		var collision = get_slide_collision(index)
 		if collision.collider.is_in_group("Body"):
 			collision.collider.apply_central_impulse(-collision.normal * inertia)
+	

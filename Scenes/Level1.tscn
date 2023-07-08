@@ -101,6 +101,7 @@ position = Vector2( 1679, 396 )
 
 [node name="Camerafor3players" parent="." instance=ExtResource( 14 )]
 position = Vector2( 1534, 387 )
+process_mode = 0
 player_1 = NodePath("../Square")
 player_2 = NodePath("../Circle")
 player_3 = NodePath("../Triangle")
