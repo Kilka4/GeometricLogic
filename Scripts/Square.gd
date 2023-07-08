@@ -14,9 +14,9 @@ var jumping = false
 
 func get_input():
 	velocity.x = 0
-	var right = Input.is_action_pressed("d")
-	var left = Input.is_action_pressed("a")
-	var jump = Input.is_action_just_pressed("jump")
+	var right = Input.is_action_pressed("Player1d")
+	var left = Input.is_action_pressed("Player1a")
+	var jump = Input.is_action_just_pressed("Player1jump")
 	var right_rotation = Input.is_action_just_pressed("right")
 	var left_rotation = Input.is_action_just_pressed("left")
 	

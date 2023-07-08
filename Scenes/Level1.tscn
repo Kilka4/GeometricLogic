@@ -91,19 +91,19 @@ position = Vector2( 872, 456 )
 position = Vector2( 1784, 456 )
 
 [node name="Triangle" parent="." instance=ExtResource( 1 )]
-position = Vector2( 414, -13 )
+position = Vector2( 1376, 400 )
 
 [node name="Circle" parent="." instance=ExtResource( 15 )]
-position = Vector2( 465, -10 )
+position = Vector2( 1532, 395 )
 
 [node name="Square" parent="." instance=ExtResource( 16 )]
-position = Vector2( 506, -10 )
+position = Vector2( 1679, 396 )
 
 [node name="Camerafor3players" parent="." instance=ExtResource( 14 )]
-position = Vector2( 464, -20 )
-player_1 = NodePath("../Triangle")
+position = Vector2( 1534, 387 )
+player_1 = NodePath("../Square")
 player_2 = NodePath("../Circle")
-player_3 = NodePath("../Square")
+player_3 = NodePath("../Triangle")
 
 [connection signal="Activated" from="WhiteButton" to="WhitewWall2" method="_on_WhiteButton_Activated"]
 [connection signal="Disabled" from="WhiteButton" to="WhitewWall2" method="_on_WhiteButton_Disabled"]

@@ -14,9 +14,9 @@ var jumping = false
 
 func get_input():
 	velocity.x = 0
-	var right = Input.is_action_pressed("d")
-	var left = Input.is_action_pressed("a")
-	var jump = Input.is_action_just_pressed("jump")
+	var right = Input.is_action_pressed("Player2rightarrow")
+	var left = Input.is_action_pressed("Player2leftarrow")
+	var jump = Input.is_action_just_pressed("Player2jumparrow")
 	
 	if jump && is_on_floor():
 		jumping = true
