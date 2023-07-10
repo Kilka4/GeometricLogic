@@ -33,6 +33,12 @@ func get_input():
 		if !is_on_floor():
 			$Sprite.flip_h = true
 
+func limit_pos_to_camera():
+	var _camera_rect = Global.current_camera2d.global_rect as Rect2
+	var _x_min = _camera_rect.position.x
+	var _x_max = _x_min + _camera_rect.size.x
+	global_position = Vector2(clamp(global_position.x, _x_min, _x_max), global_position.y)
+
 func _physics_process(delta):
 	get_input()
 	velocity.y += gravity * delta
@@ -43,3 +49,4 @@ func _physics_process(delta):
 		var collision = get_slide_collision(index)
 		if collision.collider.is_in_group("Body"):
 			collision.collider.apply_central_impulse(-collision.normal * inertia)
+	limit_pos_to_camera()

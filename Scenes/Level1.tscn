@@ -91,7 +91,7 @@ position = Vector2( 872, 456 )
 position = Vector2( 1784, 456 )
 
 [node name="Triangle" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1376, 400 )
+position = Vector2( 1400, 400 )
 
 [node name="Circle" parent="." instance=ExtResource( 15 )]
 position = Vector2( 1532, 395 )
@@ -100,11 +100,9 @@ position = Vector2( 1532, 395 )
 position = Vector2( 1679, 396 )
 
 [node name="Camerafor3players" parent="." instance=ExtResource( 14 )]
-position = Vector2( 1534, 387 )
+position = Vector2( 1539, 389 )
 process_mode = 0
-player_1 = NodePath("../Square")
-player_2 = NodePath("../Circle")
-player_3 = NodePath("../Triangle")
+script = null
 
 [connection signal="Activated" from="WhiteButton" to="WhitewWall2" method="_on_WhiteButton_Activated"]
 [connection signal="Disabled" from="WhiteButton" to="WhitewWall2" method="_on_WhiteButton_Disabled"]
