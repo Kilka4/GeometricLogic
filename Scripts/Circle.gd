@@ -12,6 +12,9 @@ var inertia = 3
 var velocity = Vector2()
 var jumping = false
 
+func _ready():
+	Global.player = self
+
 func get_input():
 	velocity.x = 0
 	var right = Input.is_action_pressed("Player2rightarrow")

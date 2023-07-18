@@ -11,7 +11,6 @@ config_version=4
 [application]
 
 config/name="Geometry"
-run/main_scene="res://Scenes/Menu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -104,9 +103,6 @@ Player3Rightrotation={
 2d_physics/layer_10="YellowButton"
 2d_physics/layer_11="WhiteButton"
 2d_physics/layer_12="WhiteBox"
-2d_physics/layer_13="RedBox"
-2d_physics/layer_14="BlueBox"
-2d_physics/layer_15="YellowBox"
 2d_physics/layer_16="WhiteWall"
 2d_physics/layer_17="BlueWall"
 2d_physics/layer_18="RedWall"
@@ -116,7 +112,7 @@ Player3Rightrotation={
 2d_physics/layer_22="RedLever"
 2d_physics/layer_23="YellowLever"
 2d_physics/layer_24="Barb"
-2d_physics/layer_25="Octagon"
+2d_physics/layer_25="Enemy"
 2d_physics/layer_26="WhiteKey"
 2d_physics/layer_27="RedKey"
 2d_physics/layer_28="BlueKey"
@@ -128,5 +124,4 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
-environment/default_clear_color=Color( 0, 0, 0, 1 )
 environment/default_environment="res://default_env.tres"

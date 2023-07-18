@@ -26,18 +26,18 @@ func turn_off():
 	for i in 1:
 			global_position.y += 32
 
-func _on_WhiteButton_Activated():
+func _on_Button_Activated():
 	for i in 1:
 			global_position.y -= 32
 
-func _on_WhiteLever_Activated():
+func _on_Lever_Activated():
 	for i in 1:
 			global_position.y -= 32
 
-func _on_WhiteButton_Disabled():
+func _on_Button_Disabled():
 	for i in 1:
 			global_position.y += 32
 
-func _on_WhiteLever_Disabled():
+func _on_Lever_Disabled():
 	for i in 1:
 			global_position.y += 32

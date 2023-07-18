@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Sprites/White/WhiteLever.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Blue/BlueLever.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Lever.gd" type="Script" id=2]
 
 [sub_resource type="AtlasTexture" id=1]
@@ -27,9 +27,9 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 8, 5 )
 
-[node name="WhiteLever" type="Area2D"]
-collision_layer = 1048576
-collision_mask = 32775
+[node name="BlueLever" type="Area2D"]
+collision_layer = 524288
+collision_mask = 7
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]

@@ -9,7 +9,7 @@ var activated = false setget change_state
 func _process(delta):
 	pass
 
-func _on_WhiteLever_body_entered(body):
+func _on_Lever_body_entered(body):
 	#ВАЖНО!!! self. нужен, чтобы функция сеттер работала
 	#при изменении переменной родительского скрипта в годо 3+
 	self.activated = !activated
