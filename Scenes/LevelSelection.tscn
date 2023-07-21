@@ -1,0 +1,108 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://theme.tres" type="Theme" id=1]
+
+[node name="LevelSelection" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -357.0
+margin_top = -73.0
+margin_right = 357.0
+margin_bottom = 73.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 714.0
+margin_bottom = 64.0
+alignment = 1
+
+[node name="Level1" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_right = 139.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+theme = ExtResource( 1 )
+text = "1"
+
+[node name="Level2" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_left = 143.0
+margin_right = 283.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+theme = ExtResource( 1 )
+text = "2"
+icon_align = 1
+
+[node name="Level3" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_left = 287.0
+margin_right = 426.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+theme = ExtResource( 1 )
+text = "3"
+
+[node name="Level4" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_left = 430.0
+margin_right = 570.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+theme = ExtResource( 1 )
+text = "4"
+
+[node name="Level5" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_left = 574.0
+margin_right = 714.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+theme = ExtResource( 1 )
+text = "5"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 68.0
+margin_right = 714.0
+margin_bottom = 132.0
+alignment = 1
+
+[node name="Level6" type="Button" parent="VBoxContainer/HBoxContainer2"]
+margin_right = 139.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+theme = ExtResource( 1 )
+text = "6"
+
+[node name="Level7" type="Button" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 143.0
+margin_right = 283.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+theme = ExtResource( 1 )
+text = "7"
+icon_align = 1
+
+[node name="Level8" type="Button" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 287.0
+margin_right = 426.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+theme = ExtResource( 1 )
+text = "8"
+
+[node name="Level9" type="Button" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 430.0
+margin_right = 570.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+theme = ExtResource( 1 )
+text = "9"
+
+[node name="Level10" type="Button" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 574.0
+margin_right = 714.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+theme = ExtResource( 1 )
+text = "10"

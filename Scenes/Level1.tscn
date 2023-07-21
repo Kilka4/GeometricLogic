@@ -161,4 +161,7 @@ player_3 = NodePath("../Triangle")
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 1 )
 
+[node name="WhiteKey2" parent="." instance=ExtResource( 12 )]
+position = Vector2( -61, 316 )
+
 [connection signal="Player_entered" from="WhiteKey" to="WhiteLockedWall" method="_on_Key_Player_entered"]
