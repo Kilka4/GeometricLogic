@@ -40,7 +40,7 @@ points = PoolVector2Array( 0, 15.0859, 15.0625, 0, 16, 0, 16, 16, 0, 16, 0, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 0, 2 ),
-"one_way": false,
+"one_way": true,
 "one_way_margin": 1.0,
 "shape": SubResource( 6 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -56,4 +56,5 @@ points = PoolVector2Array( 0, 15.0859, 15.0625, 0, 16, 0, 16, 16, 0, 16, 0, 16 )
 [node name="TilesetBlue" type="TileMap"]
 tile_set = SubResource( 8 )
 cell_size = Vector2( 16, 16 )
+collision_layer = 16
 format = 1

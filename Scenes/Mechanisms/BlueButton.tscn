@@ -28,6 +28,7 @@ animations = [ {
 extents = Vector2( 6, 1 )
 
 [node name="BlueButton" type="StaticBody2D"]
+position = Vector2( 25, 10 )
 collision_layer = 256
 collision_mask = 2055
 script = ExtResource( 2 )

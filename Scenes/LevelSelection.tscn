@@ -1,10 +1,12 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://theme.tres" type="Theme" id=1]
+[ext_resource path="res://Scripts/LevelSelection.gd" type="Script" id=2]
 
 [node name="LevelSelection" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 2 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_left = 0.5
@@ -24,8 +26,10 @@ alignment = 1
 [node name="Level1" type="Button" parent="VBoxContainer/HBoxContainer"]
 margin_right = 139.0
 margin_bottom = 64.0
+focus_mode = 0
 size_flags_horizontal = 3
 theme = ExtResource( 1 )
+enabled_focus_mode = 0
 text = "1"
 
 [node name="Level2" type="Button" parent="VBoxContainer/HBoxContainer"]
@@ -34,6 +38,8 @@ margin_right = 283.0
 margin_bottom = 64.0
 size_flags_horizontal = 3
 theme = ExtResource( 1 )
+disabled = true
+enabled_focus_mode = 0
 text = "2"
 icon_align = 1
 
@@ -43,6 +49,8 @@ margin_right = 426.0
 margin_bottom = 64.0
 size_flags_horizontal = 3
 theme = ExtResource( 1 )
+disabled = true
+enabled_focus_mode = 0
 text = "3"
 
 [node name="Level4" type="Button" parent="VBoxContainer/HBoxContainer"]
@@ -51,6 +59,8 @@ margin_right = 570.0
 margin_bottom = 64.0
 size_flags_horizontal = 3
 theme = ExtResource( 1 )
+disabled = true
+enabled_focus_mode = 0
 text = "4"
 
 [node name="Level5" type="Button" parent="VBoxContainer/HBoxContainer"]
@@ -59,6 +69,8 @@ margin_right = 714.0
 margin_bottom = 64.0
 size_flags_horizontal = 3
 theme = ExtResource( 1 )
+disabled = true
+enabled_focus_mode = 0
 text = "5"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
@@ -72,6 +84,8 @@ margin_right = 139.0
 margin_bottom = 64.0
 size_flags_horizontal = 3
 theme = ExtResource( 1 )
+disabled = true
+enabled_focus_mode = 0
 text = "6"
 
 [node name="Level7" type="Button" parent="VBoxContainer/HBoxContainer2"]
@@ -80,6 +94,8 @@ margin_right = 283.0
 margin_bottom = 64.0
 size_flags_horizontal = 3
 theme = ExtResource( 1 )
+disabled = true
+enabled_focus_mode = 0
 text = "7"
 icon_align = 1
 
@@ -89,6 +105,8 @@ margin_right = 426.0
 margin_bottom = 64.0
 size_flags_horizontal = 3
 theme = ExtResource( 1 )
+disabled = true
+enabled_focus_mode = 0
 text = "8"
 
 [node name="Level9" type="Button" parent="VBoxContainer/HBoxContainer2"]
@@ -97,6 +115,8 @@ margin_right = 570.0
 margin_bottom = 64.0
 size_flags_horizontal = 3
 theme = ExtResource( 1 )
+disabled = true
+enabled_focus_mode = 0
 text = "9"
 
 [node name="Level10" type="Button" parent="VBoxContainer/HBoxContainer2"]
@@ -105,4 +125,8 @@ margin_right = 714.0
 margin_bottom = 64.0
 size_flags_horizontal = 3
 theme = ExtResource( 1 )
+disabled = true
+enabled_focus_mode = 0
 text = "10"
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Level1" to="." method="_on_Level1_pressed"]

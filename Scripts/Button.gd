@@ -13,10 +13,12 @@ func _process(delta):
 
 
 func _on_activation_body_entered(body):
-	activated = true
-	emit_signal("Activated")
+	if body != self:
+		activated = true
+		emit_signal("Activated")
 
 
 func _on_activation_body_exited(body):
-	activated = false
-	emit_signal("Disabled")
+	if body != self:
+		activated = false
+		emit_signal("Disabled")

@@ -117,6 +117,7 @@ Player3Rightrotation={
 2d_physics/layer_27="RedKey"
 2d_physics/layer_28="BlueKey"
 2d_physics/layer_29="YellowKey"
+2d_physics/layer_30="ReachingTheNextLevel"
 
 [physics]
 
