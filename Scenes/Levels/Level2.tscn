@@ -16,7 +16,12 @@
 [ext_resource path="res://Scenes/Walls/RedWall.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scenes/WhiteBox.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scenes/Barb.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Scenes/ReachingTheNextLevel.tscn" type="PackedScene" id=17]
+
+[sub_resource type="Environment" id=2]
+background_mode = 4
+glow_enabled = true
+glow_bloom = 0.08
+glow_blend_mode = 0
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 11.5, 101 )
@@ -33,7 +38,7 @@ tile_data = PoolIntArray( 1835063, 0, 131072, 1900572, 0, 0, 1900573, 0, 0, 1900
 tile_data = PoolIntArray( 1638428, 0, 0, 1638429, 0, 0, 1638430, 0, 0, 1638431, 0, 0, 1638433, 0, 0, 1638434, 0, 0, 1638435, 0, 0, 1638436, 0, 0, 1638437, 0, 0, 1638439, 0, 0, 1638440, 0, 0, 1638441, 0, 0, 1638442, 0, 0, 1638451, 0, 131072, 1835036, 0, 0, 1835037, 0, 0, 1835038, 0, 0, 1835039, 0, 0, 1835041, 0, 0, 1835042, 0, 0, 1835043, 0, 0, 1835044, 0, 0, 1835045, 0, 0, 1835047, 0, 0, 1835048, 0, 0, 1835049, 0, 0, 1835050, 0, 0, 1835054, 0, 131072, 1835055, 0, 131072, 1835062, 0, 131072 )
 
 [node name="TilesetBlue" parent="." instance=ExtResource( 11 )]
-tile_data = PoolIntArray( 1376284, 0, 0, 1376285, 0, 0, 1376286, 0, 0, 1376287, 0, 0, 1376289, 0, 0, 1376290, 0, 0, 1376291, 0, 0, 1376292, 0, 0, 1376293, 0, 0, 1376295, 0, 0, 1376296, 0, 0, 1376297, 0, 0, 1376298, 0, 0, 1572892, 0, 0, 1572893, 0, 0, 1572894, 0, 0, 1572895, 0, 0, 1572897, 0, 0, 1572898, 0, 0, 1572899, 0, 0, 1572900, 0, 0, 1572901, 0, 0, 1572903, 0, 0, 1572904, 0, 0, 1572905, 0, 0, 1572906, 0, 0, 1572910, 0, 131072, 1572911, 0, 131072, 1638452, 0, 131072 )
+tile_data = PoolIntArray( 1376284, 0, 0, 1376285, 0, 0, 1376286, 0, 0, 1376287, 0, 0, 1376289, 0, 0, 1376290, 0, 0, 1376291, 0, 0, 1376292, 0, 0, 1376293, 0, 0, 1376295, 0, 0, 1376296, 0, 0, 1376297, 0, 0, 1376298, 0, 0, 1572892, 0, 0, 1572893, 0, 0, 1572894, 0, 0, 1572895, 0, 0, 1572897, 0, 0, 1572898, 0, 0, 1572899, 0, 0, 1572900, 0, 0, 1572901, 0, 0, 1572903, 0, 0, 1572904, 0, 0, 1572905, 0, 0, 1572906, 0, 0, 1572910, 0, 131072, 1572911, 0, 131072, 1638452, 0, 131072, 1835052, 0, 131072 )
 
 [node name="BlueWall" parent="." instance=ExtResource( 12 )]
 position = Vector2( 440, 368 )
@@ -107,6 +112,9 @@ position = Vector2( 664, 376 )
 [node name="YellowButton4" parent="." instance=ExtResource( 1 )]
 position = Vector2( 664, 440 )
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 2 )
+
 [node name="Barbs" type="Node2D" parent="."]
 position = Vector2( 0, -1 )
 
@@ -145,9 +153,6 @@ position = Vector2( 936, 521 )
 
 [node name="WhiteBox" parent="." instance=ExtResource( 15 )]
 position = Vector2( 316, 503 )
-
-[node name="ReachingTheNextLevel" parent="." instance=ExtResource( 17 )]
-position = Vector2( 1002, 424 )
 
 [node name="Square" parent="." instance=ExtResource( 2 )]
 position = Vector2( 238, 499 )

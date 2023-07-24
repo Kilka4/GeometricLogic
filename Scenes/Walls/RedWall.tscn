@@ -7,6 +7,7 @@
 extents = Vector2( 2.5, 16 )
 
 [node name="RedWall" type="StaticBody2D"]
+z_index = -1
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]

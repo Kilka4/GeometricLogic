@@ -130,3 +130,4 @@ enabled_focus_mode = 0
 text = "10"
 
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/Level1" to="." method="_on_Level1_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Level2" to="." method="_on_Level2_pressed"]

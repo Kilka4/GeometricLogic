@@ -19,6 +19,5 @@ func _on_activation_body_entered(body):
 
 
 func _on_activation_body_exited(body):
-	if body != self:
 		activated = false
 		emit_signal("Disabled")
