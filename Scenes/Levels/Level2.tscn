@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Scenes/Mechanisms/YellowButton.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Square.tscn" type="PackedScene" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://Scenes/Walls/RedWall.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scenes/WhiteBox.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scenes/Barb.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Scenes/GameOver.tscn" type="PackedScene" id=17]
 
 [sub_resource type="Environment" id=2]
 background_mode = 4
@@ -175,6 +176,9 @@ position = Vector2( 1140, 240 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 2.5, 91 )
 shape = SubResource( 1 )
+
+[node name="GameOver" parent="." instance=ExtResource( 17 )]
+visible = false
 
 [connection signal="Activated" from="BlueButton" to="BlueWall" method="_on_Button_Activated"]
 [connection signal="Disabled" from="BlueButton" to="BlueWall" method="_on_Button_Disabled"]

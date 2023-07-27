@@ -167,5 +167,6 @@ position = Vector2( 1258, 360 )
 
 [node name="GameOver" parent="." instance=ExtResource( 11 )]
 layer = 2
+visible = false
 
 [connection signal="Player_entered" from="WhiteKey" to="WhiteLockedWall" method="_on_Key_Player_entered"]
