@@ -5,7 +5,7 @@
 [ext_resource path="res://Scripts/ReachingTheNextLevel.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 52.5, 56.5 )
+extents = Vector2( 57, 56.5 )
 
 [sub_resource type="DynamicFont" id=2]
 font_data = ExtResource( 2 )
@@ -16,9 +16,10 @@ script = ExtResource( 3 )
 
 [node name="Trigger" type="Area2D" parent="."]
 collision_layer = 536870912
+collision_mask = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger"]
-position = Vector2( 44.5, -52.5 )
+position = Vector2( 49, -52.5 )
 shape = SubResource( 1 )
 
 [node name="Label" type="Label" parent="."]
@@ -30,3 +31,4 @@ custom_fonts/font = SubResource( 2 )
 text = "Next Level"
 
 [connection signal="body_entered" from="Trigger" to="." method="_on_Trigger_body_entered"]
+[connection signal="body_exited" from="Trigger" to="." method="_on_Trigger_body_exited"]

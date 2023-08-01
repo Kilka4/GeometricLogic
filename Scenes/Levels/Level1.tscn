@@ -163,7 +163,7 @@ position = Vector2( 2.5, 91 )
 shape = SubResource( 2 )
 
 [node name="ReachingTheNextLevel" parent="." instance=ExtResource( 8 )]
-position = Vector2( 1258, 360 )
+position = Vector2( 179, 471 )
 
 [node name="GameOver" parent="." instance=ExtResource( 11 )]
 layer = 2
