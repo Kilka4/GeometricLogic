@@ -19,21 +19,33 @@ func _process(delta):
 		level4.set_deferred("disabled", false)
 	if Global.level5Unlocked == true:
 		level5.set_deferred("disabled", false)
-	if Global.level6Unlocked == true:
-		level6.set_deferred("disabled", false)
-	if Global.level7Unlocked == true:
-		level7.set_deferred("disabled", false)
-	if Global.level8Unlocked == true:
-		level8.set_deferred("disabled", false)
-	if Global.level9Unlocked == true:
-		level9.set_deferred("disabled", false)
-	if Global.level10Unlocked == true:
-		level10.set_deferred("disabled", false)
 
 
 func _on_Level1_pressed():
+	$Transition.play("Transition")
+	yield($Transition, "animation_finished")
 	get_tree().change_scene("res://Scenes/Levels/Level1.tscn")
 
 
 func _on_Level2_pressed():
+	$Transition.play("Transition")
+	yield($Transition, "animation_finished")
 	get_tree().change_scene("res://Scenes/Levels/Level2.tscn")
+
+
+func _on_Level3_pressed():
+	$Transition.play("Transition")
+	yield($Transition, "animation_finished")
+	get_tree().change_scene("res://Scenes/Levels/Level3.tscn")
+
+
+func _on_Level4_pressed():
+	$Transition.play("Transition")
+	yield($Transition, "animation_finished")
+	get_tree().change_scene("res://Scenes/Levels/Level4.tscn")
+
+
+func _on_Level5_pressed():
+	$Transition.play("Transition")
+	yield($Transition, "animation_finished")
+	get_tree().change_scene("res://Scenes/Levels/Level5.tscn")

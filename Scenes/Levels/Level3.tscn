@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Scenes/Walls/YellowLockedWall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Keys/RedKey.tscn" type="PackedScene" id=2]
@@ -16,7 +16,6 @@
 [ext_resource path="res://Scenes/Tilesets/TilesetBlue.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scenes/Barb.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scenes/Octagon.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Scenes/GameOver.tscn" type="PackedScene" id=17]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 77.5 )
@@ -69,7 +68,7 @@ position = Vector2( 170, 541 )
 position = Vector2( 170, 510 )
 
 [node name="Camerafor3players" parent="." instance=ExtResource( 4 )]
-position = Vector2( 418, 381 )
+position = Vector2( 447, 348 )
 player_1 = NodePath("../Square")
 player_2 = NodePath("../Circle")
 player_3 = NodePath("../Triangle")
@@ -142,9 +141,6 @@ position = Vector2( 1092, 411 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 0, -17.5 )
 shape = SubResource( 1 )
-
-[node name="GameOver" parent="." instance=ExtResource( 17 )]
-visible = false
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 2 )

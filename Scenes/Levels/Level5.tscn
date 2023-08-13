@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Scenes/Mechanisms/RedLever.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Tilesets/TilesetBlue.tscn" type="PackedScene" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://Scenes/Walls/BlueWall.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scenes/Triangle.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scenes/Camerafor3players.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Scenes/WorldEnvironment.tscn" type="PackedScene" id=17]
 
 [node name="Level5" type="Node2D"]
 
@@ -205,3 +206,5 @@ position = Vector2( 411, 308 )
 player_1 = NodePath("../Square")
 player_2 = NodePath("../Circle")
 player_3 = NodePath("../Triangle")
+
+[node name="WorldEnvironment" parent="." instance=ExtResource( 17 )]
