@@ -4,11 +4,6 @@ onready var level2 = $VBoxContainer/HBoxContainer/Level2
 onready var level3 = $VBoxContainer/HBoxContainer/Level3
 onready var level4 = $VBoxContainer/HBoxContainer/Level4
 onready var level5 = $VBoxContainer/HBoxContainer/Level5
-onready var level6 = $VBoxContainer/HBoxContainer2/Level6
-onready var level7 = $VBoxContainer/HBoxContainer2/Level7
-onready var level8 = $VBoxContainer/HBoxContainer2/Level8
-onready var level9 = $VBoxContainer/HBoxContainer2/Level9
-onready var level10 = $VBoxContainer/HBoxContainer2/Level10
 
 func _process(delta):
 	if Global.level2Unlocked == true:
