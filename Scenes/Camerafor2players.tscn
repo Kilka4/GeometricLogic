@@ -4,5 +4,5 @@
 
 [node name="Camerafor2players" type="Camera2D"]
 current = true
-zoom = Vector2( 0.6, 0.6 )
+zoom = Vector2( 0.3, 0.3 )
 script = ExtResource( 1 )

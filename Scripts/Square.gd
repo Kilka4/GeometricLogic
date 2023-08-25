@@ -54,5 +54,3 @@ func _physics_process(delta):
 		if collision.collider.is_in_group("Body"):
 			collision.collider.apply_central_impulse(-collision.normal * inertia)
 	limit_pos_to_camera()
-	
-	
