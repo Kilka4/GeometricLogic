@@ -209,7 +209,6 @@ position = Vector2( -360, 470 )
 
 [node name="Camerafor3players" parent="." instance=ExtResource( 8 )]
 position = Vector2( -21, 254 )
-zoom = Vector2( 0.3, 0.3 )
 player_1 = NodePath("../Square")
 player_2 = NodePath("../Circle")
 player_3 = NodePath("../Triangle")
