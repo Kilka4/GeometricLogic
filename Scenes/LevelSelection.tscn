@@ -45,7 +45,7 @@ margin_bottom = 32.0
 margin_right = 714.0
 margin_bottom = 54.0
 theme = ExtResource( 1 )
-text = "2 Players"
+text = "2 Игрока"
 align = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
@@ -109,7 +109,7 @@ margin_top = 126.0
 margin_right = 714.0
 margin_bottom = 180.0
 theme = ExtResource( 1 )
-text = "3 Players"
+text = "3 Игрока"
 align = 1
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]

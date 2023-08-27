@@ -67,18 +67,22 @@ func _on_Level1For2Players_pressed():
 func _on_Level2For2Players_pressed():
 	$Transition.play("Transition")
 	yield($Transition, "animation_finished")
+	get_tree().change_scene("res://Scenes/Levels/2PlayersLevel2.tscn")
 
 
 func _on_Level3For2Players_pressed():
 	$Transition.play("Transition")
 	yield($Transition, "animation_finished")
+	get_tree().change_scene("res://Scenes/Levels/2PlayersLevel3.tscn")
 
 
 func _on_Level4For2Players_pressed():
 	$Transition.play("Transition")
 	yield($Transition, "animation_finished")
+	get_tree().change_scene("res://Scenes/Levels/2PlayersLevel4.tscn")
 
 
 func _on_Level5For2Players_pressed():
 	$Transition.play("Transition")
 	yield($Transition, "animation_finished")
+	get_tree().change_scene("res://Scenes/Levels/2PlayersLevel5.tscn")
