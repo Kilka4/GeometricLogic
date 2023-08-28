@@ -28,26 +28,26 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
-margin_left = 426.0
-margin_top = 232.0
-margin_right = 598.0
-margin_bottom = 368.0
+margin_left = 429.0
+margin_top = 235.0
+margin_right = 595.0
+margin_bottom = 365.0
 
 [node name="PlayButton" type="Button" parent="CenterContainer/VBoxContainer"]
-margin_right = 172.0
-margin_bottom = 64.0
+margin_right = 166.0
+margin_bottom = 61.0
 theme = ExtResource( 1 )
 text = "Играть"
 
 [node name="Control" type="Control" parent="CenterContainer/VBoxContainer"]
-margin_top = 68.0
-margin_right = 172.0
-margin_bottom = 68.0
+margin_top = 65.0
+margin_right = 166.0
+margin_bottom = 65.0
 
 [node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer"]
-margin_top = 72.0
-margin_right = 172.0
-margin_bottom = 136.0
+margin_top = 69.0
+margin_right = 166.0
+margin_bottom = 130.0
 theme = ExtResource( 1 )
 text = "Выйти"
 

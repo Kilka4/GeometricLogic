@@ -116,10 +116,10 @@ position = Vector2( 856, 448 )
 position = Vector2( 472, 392 )
 
 [node name="Square" parent="." instance=ExtResource( 14 )]
-position = Vector2( 192, 520 )
+position = Vector2( 231, 522 )
 
 [node name="Circle" parent="." instance=ExtResource( 12 )]
-position = Vector2( 224, 520 )
+position = Vector2( 264, 521 )
 
 [node name="Camerafor2players" parent="." instance=ExtResource( 13 )]
 position = Vector2( 456, 232 )

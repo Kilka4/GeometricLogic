@@ -45,13 +45,13 @@ tile_data = PoolIntArray( 1507345, 0, 131072, 1507346, 0, 131072, 1507347, 0, 13
 tile_data = PoolIntArray( 1441835, 0, 131072, 1441836, 0, 131072, 1572911, 0, 131072, 1572912, 0, 131072, 1638452, 0, 131072, 1638453, 0, 131072, 1835062, 0, 131072, 1835063, 0, 131072, 1835064, 0, 131072, 1966127, 0, 131072, 1966128, 0, 131072, 1966129, 0, 131072 )
 
 [node name="Circle" parent="." instance=ExtResource( 3 )]
-position = Vector2( 87, 525 )
+position = Vector2( 193, 471 )
 
 [node name="Square" parent="." instance=ExtResource( 5 )]
-position = Vector2( 86, 494 )
+position = Vector2( 160, 472 )
 
 [node name="Triangle" parent="." instance=ExtResource( 4 )]
-position = Vector2( 86, 465 )
+position = Vector2( 129, 472 )
 
 [node name="Camerafor3players" parent="." instance=ExtResource( 1 )]
 position = Vector2( 384, 338 )

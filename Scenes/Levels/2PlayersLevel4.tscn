@@ -169,10 +169,10 @@ shape = SubResource( 1 )
 [node name="Transition" parent="." instance=ExtResource( 12 )]
 
 [node name="Square" parent="." instance=ExtResource( 13 )]
-position = Vector2( -75, 478 )
+position = Vector2( -3, 475 )
 
 [node name="Circle" parent="." instance=ExtResource( 16 )]
-position = Vector2( -33, 479 )
+position = Vector2( 24, 473 )
 
 [node name="Camerafor2players" parent="." instance=ExtResource( 4 )]
 position = Vector2( 174, 323 )
