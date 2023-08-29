@@ -112,7 +112,6 @@ position = Vector2( 104, 313 )
 
 [node name="TransitionFor2Players" parent="." instance=ExtResource( 14 )]
 position = Vector2( 1100, 360 )
-z_index = -1
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( 1244, 310 )
