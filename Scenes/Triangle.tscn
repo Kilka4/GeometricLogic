@@ -38,6 +38,8 @@ anims/jump = SubResource( 1 )
 
 [node name="Transfer" type="Area2D" parent="."]
 position = Vector2( 0, -16 )
+collision_layer = 0
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Transfer"]
 position = Vector2( 0, 6.75 )
