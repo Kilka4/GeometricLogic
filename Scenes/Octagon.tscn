@@ -5,7 +5,7 @@
 
 [node name="Octagon" type="KinematicBody2D"]
 collision_layer = 16777216
-collision_mask = 25657471
+collision_mask = 25661567
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]

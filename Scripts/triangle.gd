@@ -37,6 +37,16 @@ func get_input():
 		$Sprite.rotation_degrees -= 60
 		$CollisionPolygon2D.rotation_degrees -= 60
 
+
+func _on_Transfer_body_entered(body):
+	if body.is_in_group("Square") || body.is_in_group("Circle"):
+		body.gravity = 1
+		body.position.x = position.x
+
+
+func _on_Transfer_body_exited(body):
+	body.gravity = 1200
+
 func limit_pos_to_camera():
 	var _camera_rect = Global.current_camera2d.global_rect as Rect2
 	var _x_min = _camera_rect.position.x
