@@ -45,7 +45,8 @@ func _on_Transfer_body_entered(body):
 
 
 func _on_Transfer_body_exited(body):
-	body.gravity = 1200
+	if body.is_in_group("Circle") || body.is_in_group("Triangle"):
+		body.gravity = 1200
 
 func limit_pos_to_camera():
 	var _camera_rect = Global.current_camera2d.global_rect as Rect2

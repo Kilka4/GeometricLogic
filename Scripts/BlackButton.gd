@@ -14,7 +14,7 @@ func _process(delta):
 
 
 func _on_activation_body_entered(body):
-	if body != self:
+	if body != self && activated == false:
 		activated = true
 		emit_signal("Activated")
 

@@ -18,7 +18,6 @@ config/windows_native_icon="res://Sprites/IconGeometryWindows.ico"
 [autoload]
 
 Global="*res://Scripts/global.gd"
-Pause="*res://Scenes/Pause.tscn"
 
 [display]
 
