@@ -9,3 +9,17 @@ var level2For2PlayersUnlocked: bool = false
 var level3For2PlayersUnlocked: bool = false
 var level4For2PlayersUnlocked: bool = false
 var level5For2PlayersUnlocked: bool = false
+
+
+func save_file(value):
+	var file = File.new()
+	file.open("res://save.dat", File.WRITE)
+	file.store_var(value)
+	file.close()
+
+func load_file():
+	var file = File.new()
+	file.open("res://save.dat", File.READ)
+	var value = file.get_as_text()
+	file.close()
+	return value

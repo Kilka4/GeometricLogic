@@ -51,12 +51,12 @@ align = 1
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 margin_top = 58.0
 margin_right = 714.0
-margin_bottom = 122.0
+margin_bottom = 119.0
 alignment = 1
 
 [node name="Level1For2Players" type="Button" parent="VBoxContainer/HBoxContainer"]
 margin_right = 139.0
-margin_bottom = 64.0
+margin_bottom = 61.0
 focus_mode = 0
 size_flags_horizontal = 3
 theme = ExtResource( 1 )
@@ -66,7 +66,7 @@ text = "1"
 [node name="Level2For2Players" type="Button" parent="VBoxContainer/HBoxContainer"]
 margin_left = 143.0
 margin_right = 283.0
-margin_bottom = 64.0
+margin_bottom = 61.0
 size_flags_horizontal = 3
 theme = ExtResource( 1 )
 disabled = true
@@ -77,7 +77,7 @@ icon_align = 1
 [node name="Level3For2Players" type="Button" parent="VBoxContainer/HBoxContainer"]
 margin_left = 287.0
 margin_right = 426.0
-margin_bottom = 64.0
+margin_bottom = 61.0
 size_flags_horizontal = 3
 theme = ExtResource( 1 )
 disabled = true
@@ -87,7 +87,7 @@ text = "3"
 [node name="Level4For2Players" type="Button" parent="VBoxContainer/HBoxContainer"]
 margin_left = 430.0
 margin_right = 570.0
-margin_bottom = 64.0
+margin_bottom = 61.0
 size_flags_horizontal = 3
 theme = ExtResource( 1 )
 disabled = true
@@ -97,7 +97,7 @@ text = "4"
 [node name="Level5For2Players" type="Button" parent="VBoxContainer/HBoxContainer"]
 margin_left = 574.0
 margin_right = 714.0
-margin_bottom = 64.0
+margin_bottom = 61.0
 size_flags_horizontal = 3
 theme = ExtResource( 1 )
 disabled = true
@@ -105,22 +105,22 @@ enabled_focus_mode = 0
 text = "5"
 
 [node name="Label2" type="Label" parent="VBoxContainer"]
-margin_top = 126.0
+margin_top = 123.0
 margin_right = 714.0
-margin_bottom = 180.0
+margin_bottom = 177.0
 theme = ExtResource( 1 )
 text = "3 Игрока"
 align = 1
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 184.0
+margin_top = 181.0
 margin_right = 714.0
-margin_bottom = 248.0
+margin_bottom = 242.0
 alignment = 1
 
 [node name="Level1" type="Button" parent="VBoxContainer/HBoxContainer2"]
 margin_right = 139.0
-margin_bottom = 64.0
+margin_bottom = 61.0
 focus_mode = 0
 size_flags_horizontal = 3
 theme = ExtResource( 1 )
@@ -130,7 +130,7 @@ text = "1"
 [node name="Level2" type="Button" parent="VBoxContainer/HBoxContainer2"]
 margin_left = 143.0
 margin_right = 283.0
-margin_bottom = 64.0
+margin_bottom = 61.0
 size_flags_horizontal = 3
 theme = ExtResource( 1 )
 disabled = true
@@ -141,7 +141,7 @@ icon_align = 1
 [node name="Level3" type="Button" parent="VBoxContainer/HBoxContainer2"]
 margin_left = 287.0
 margin_right = 426.0
-margin_bottom = 64.0
+margin_bottom = 61.0
 size_flags_horizontal = 3
 theme = ExtResource( 1 )
 disabled = true
@@ -151,7 +151,7 @@ text = "3"
 [node name="Level4" type="Button" parent="VBoxContainer/HBoxContainer2"]
 margin_left = 430.0
 margin_right = 570.0
-margin_bottom = 64.0
+margin_bottom = 61.0
 size_flags_horizontal = 3
 theme = ExtResource( 1 )
 disabled = true
@@ -161,7 +161,7 @@ text = "4"
 [node name="Level5" type="Button" parent="VBoxContainer/HBoxContainer2"]
 margin_left = 574.0
 margin_right = 714.0
-margin_bottom = 64.0
+margin_bottom = 61.0
 size_flags_horizontal = 3
 theme = ExtResource( 1 )
 disabled = true
