@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Scripts/LevelsScripts/Level2.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Mechanisms/YellowButton.tscn" type="PackedScene" id=2]
@@ -20,6 +20,7 @@
 [ext_resource path="res://Scenes/Walls/RedWall.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Scenes/Mechanisms/RedButton.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Scenes/Pause.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Scenes/Shader.tscn" type="PackedScene" id=21]
 
 [sub_resource type="Environment" id=2]
 background_mode = 4
@@ -187,7 +188,8 @@ position = Vector2( 1018, 424 )
 [node name="Transition" parent="." instance=ExtResource( 15 )]
 
 [node name="Pause" parent="." instance=ExtResource( 20 )]
-visible = false
+
+[node name="Shader" parent="." instance=ExtResource( 21 )]
 
 [connection signal="Activated" from="BlueButton" to="BlueWall" method="_on_Button_Activated"]
 [connection signal="Disabled" from="BlueButton" to="BlueWall" method="_on_Button_Disabled"]

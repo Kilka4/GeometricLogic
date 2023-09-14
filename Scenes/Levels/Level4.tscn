@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Scenes/Camerafor3players.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Tilesets/TilesetRed.tscn" type="PackedScene" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://Scenes/ReachingTheNextLevel.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Scenes/Pause.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Scenes/Transition.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Scenes/Shader.tscn" type="PackedScene" id=20]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 23.75, 52.5 )
@@ -166,6 +167,8 @@ position = Vector2( 1308, 361 )
 [node name="Pause" parent="." instance=ExtResource( 18 )]
 
 [node name="Transition" parent="." instance=ExtResource( 19 )]
+
+[node name="Shader" parent="." instance=ExtResource( 20 )]
 
 [connection signal="Player_entered" from="BlueKey" to="BlueLockedWall" method="_on_Key_Player_entered"]
 [connection signal="Player_entered" from="RedKey" to="RedLockedWall" method="_on_Key_Player_entered"]

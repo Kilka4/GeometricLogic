@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Scenes/Walls/YellowLockedWall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Keys/RedKey.tscn" type="PackedScene" id=2]
@@ -20,6 +20,7 @@
 [ext_resource path="res://Scenes/ReachingTheNextLevel.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Scenes/Pause.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Scenes/Transition.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Scenes/Shader.tscn" type="PackedScene" id=21]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 77.5 )
@@ -156,6 +157,8 @@ position = Vector2( 956, 456 )
 [node name="Pause" parent="." instance=ExtResource( 19 )]
 
 [node name="Transition" parent="." instance=ExtResource( 20 )]
+
+[node name="Shader" parent="." instance=ExtResource( 21 )]
 
 [connection signal="Player_entered" from="YellowKey" to="YellowLockedWall" method="_on_Key_Player_entered"]
 [connection signal="Player_entered" from="RedKey" to="RedLockedWall" method="_on_Key_Player_entered"]

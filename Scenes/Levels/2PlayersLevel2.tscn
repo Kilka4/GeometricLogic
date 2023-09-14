@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Scenes/Tilesets/TilesetBlue.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Tilesets/TilesetRed.tscn" type="PackedScene" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://Scenes/Transition.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scenes/WorldEnvironment.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Scenes/Pause.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scenes/Shader.tscn" type="PackedScene" id=18]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 80 )
@@ -150,6 +151,8 @@ shape = SubResource( 1 )
 
 [node name="Pause" parent="." instance=ExtResource( 17 )]
 visible = false
+
+[node name="Shader" parent="." instance=ExtResource( 18 )]
 
 [connection signal="Activated" from="RedButton" to="RedWall" method="_on_Button_Activated"]
 [connection signal="Disabled" from="RedButton" to="RedWall" method="_on_Button_Disabled"]

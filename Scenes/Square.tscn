@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scripts/Square.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/RedSquare.png" type="Texture" id=2]
@@ -6,8 +6,23 @@
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 8, 8 )
 
+[sub_resource type="Animation" id=7]
+resource_name = "Jump with Decrease"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.5, 0.5 ), Vector2( 0.5, 0.25 ), Vector2( 0.5, 0.5 ) ]
+}
+
 [sub_resource type="Animation" id=3]
-resource_name = "jump"
+resource_name = "Normal Jump"
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:scale")
 tracks/0/interp = 1
@@ -19,6 +34,36 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1, 1 ), Vector2( 1, 0.5 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "decrease"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.5 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "increase"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.5, 0.5 ), Vector2( 1, 1 ) ]
 }
 
 [sub_resource type="RectangleShape2D" id=4]
@@ -37,12 +82,15 @@ shape = SubResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 playback_speed = 5.0
-anims/jump = SubResource( 3 )
+"anims/Jump with Decrease" = SubResource( 7 )
+"anims/Normal Jump" = SubResource( 3 )
+anims/decrease = SubResource( 5 )
+anims/increase = SubResource( 6 )
 
 [node name="Transfer" type="Area2D" parent="."]
 position = Vector2( 0, -16 )
 collision_layer = 0
-collision_mask = 5
+collision_mask = 69
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Transfer"]
 position = Vector2( 0, 6.75 )
