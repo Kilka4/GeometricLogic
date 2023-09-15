@@ -30,13 +30,6 @@ func get_input():
 	if left:
 		velocity.x -= speed
 		$Sprite.flip_h = true
-	if !is_on_floor() && right_rotation:
-		$Sprite.rotation_degrees += 60
-		$CollisionPolygon2D.rotation_degrees += 60
-	if !is_on_floor() && left_rotation:
-		$Sprite.rotation_degrees -= 60
-		$CollisionPolygon2D.rotation_degrees -= 60
-
 
 func _on_Transfer_body_entered(body):
 	if body.is_in_group("Square") || body.is_in_group("Circle"):
