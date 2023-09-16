@@ -8,6 +8,8 @@ var max_slides: int = 4
 var floor_max_angle: float = 0.785398
 var mass: float = 1
 var inertia = 3
+var direction = 1
+var can_teleport = true
 
 var velocity = Vector2()
 var jumping = false
@@ -25,13 +27,57 @@ func get_input():
 	elif right:
 		velocity.x += speed
 		$Sprite.rotation_degrees += 10
+		$Teleport/Sprite.rotation_degrees += 10
+		$Teleport/Sprite.position.x = 144
+		direction = 1
 		if !is_on_floor():
 			$Sprite.flip_h = false
+			$Teleport/Sprite.flip_h = false
 	elif left:
 		velocity.x -= speed
 		$Sprite.rotation_degrees -= 10
+		$Teleport/Sprite.rotation_degrees -= 10
+		$Teleport/Sprite.position.x = -144
+		direction = -1
 		if !is_on_floor():
 			$Sprite.flip_h = true
+			$Teleport/Sprite.flip_h = true
+	
+	if can_teleport == false:
+		$Teleport/Sprite.modulate = Color("c75a5a5a")
+	else:
+		$Teleport/Sprite.modulate = Color("8dffffff")
+
+func _input(event):
+	if event is InputEventKey:
+		
+		
+		if event.is_pressed() && event.scancode == KEY_ENTER:
+			$Teleport/Sprite.set_deferred("visible", true)
+		
+		
+		elif event.is_echo() && event.scancode == KEY_ENTER && can_teleport == true:
+			$Teleport/Sprite.set_deferred("visible", false)
+			global_position.x = global_position.x + (144 * direction)
+
+func _on_TeleportTrigger_body_entered(body):
+	can_teleport = false
+
+func _on_TeleportTrigger_body_exited(body):
+	can_teleport = true
+
+#func teleport():
+#
+#	if Input.is_action_pressed("Teleport2player"):
+#		#global_position.x = global_position.x + (144 * direction)
+#		$Teleport/Sprite.set_deferred("visible", true)
+#	elif button_pressed == true:
+#		$Teleport/Sprite.set_deferred("visible", false)
+#		global_position.x = global_position.x + (144 * direction)
+#	else:
+#		$Teleport/Sprite.set_deferred("visible", false)
+
+
 
 func _on_Transfer_body_entered(body):
 	if body.is_in_group("Square") || body.is_in_group("Triangle"):

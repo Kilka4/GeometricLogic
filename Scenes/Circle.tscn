@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/Circle.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/BlueCircle.png" type="Texture" id=2]
@@ -24,6 +24,9 @@ tracks/0/keys = {
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 4, 0.75 )
 
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 151.5, 7.5 )
+
 [node name="Circle" type="KinematicBody2D" groups=["Circle", "Player"]]
 collision_mask = 1367
 script = ExtResource( 1 )
@@ -47,5 +50,23 @@ collision_mask = 6
 position = Vector2( 0, 6.75 )
 shape = SubResource( 4 )
 
+[node name="Teleport" type="Node2D" parent="."]
+
+[node name="TeleportTrigger" type="Area2D" parent="Teleport"]
+collision_layer = 0
+collision_mask = 8896592
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teleport/TeleportTrigger"]
+position = Vector2( 0.5, -0.5 )
+shape = SubResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="Teleport"]
+visible = false
+modulate = Color( 1, 1, 1, 0.552941 )
+position = Vector2( 144, 0 )
+texture = ExtResource( 2 )
+
 [connection signal="body_entered" from="Transfer" to="." method="_on_Transfer_body_entered"]
 [connection signal="body_exited" from="Transfer" to="." method="_on_Transfer_body_exited"]
+[connection signal="body_entered" from="Teleport/TeleportTrigger" to="." method="_on_TeleportTrigger_body_entered"]
+[connection signal="body_exited" from="Teleport/TeleportTrigger" to="." method="_on_TeleportTrigger_body_exited"]
