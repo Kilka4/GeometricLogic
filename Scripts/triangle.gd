@@ -8,6 +8,7 @@ var max_slides: int = 4
 var floor_max_angle: float = 0.785398
 var mass: float = 1
 var inertia = 3
+var can_shoot = true
 
 var velocity = Vector2()
 var jumping = false
@@ -33,11 +34,17 @@ func get_input():
 		velocity.x -= speed
 		$Sprite.flip_h = true
 		$Position2D.position.x = abs($Position2D.position.x) * -1
-	if shoot:
+	if shoot && can_shoot:
+		can_shoot = false
+		$Timer.start()
 		var bullet = BULLET.instance()
 		bullet.direction = sign($Position2D.position.x)
 		bullet.position = $Position2D.global_position
 		get_parent().add_child(bullet)
+
+
+func _on_Timer_timeout():
+	can_shoot = true
 
 func _on_Transfer_body_entered(body):
 	if body.is_in_group("Square") || body.is_in_group("Circle"):
