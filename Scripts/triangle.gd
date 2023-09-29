@@ -12,13 +12,14 @@ var inertia = 3
 var velocity = Vector2()
 var jumping = false
 
+const BULLET = preload("res://Scenes/Bullet.tscn")
+
 func get_input():
 	velocity.x = 0
 	var right = Input.is_action_pressed("Player3k")
 	var left = Input.is_action_pressed("Player3h")
 	var jump = Input.is_action_just_pressed("Player3jump")
-	var right_rotation = Input.is_action_just_pressed("Player3Rightrotation")
-	var left_rotation = Input.is_action_just_pressed("Player3Leftrotation")
+	var shoot = Input.is_action_just_pressed("Player3Shoot")
 	
 	if jump && is_on_floor():
 		jumping = true
@@ -27,9 +28,16 @@ func get_input():
 	if right:
 		velocity.x += speed
 		$Sprite.flip_h = false
+		$Position2D.position.x = abs($Position2D.position.x) * 1
 	if left:
 		velocity.x -= speed
 		$Sprite.flip_h = true
+		$Position2D.position.x = abs($Position2D.position.x) * -1
+	if shoot:
+		var bullet = BULLET.instance()
+		bullet.direction = sign($Position2D.position.x)
+		bullet.position = $Position2D.global_position
+		get_parent().add_child(bullet)
 
 func _on_Transfer_body_entered(body):
 	if body.is_in_group("Square") || body.is_in_group("Circle"):

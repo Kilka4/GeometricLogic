@@ -29,6 +29,7 @@ func get_input():
 		$Sprite.rotation_degrees += 10
 		$Teleport/Sprite.rotation_degrees += 10
 		$Teleport/Sprite.position.x = 144
+		$Teleport/TeleportTrigger/CollisionShape2D.position.x = 72
 		direction = 1
 		if !is_on_floor():
 			$Sprite.flip_h = false
@@ -38,7 +39,9 @@ func get_input():
 		$Sprite.rotation_degrees -= 10
 		$Teleport/Sprite.rotation_degrees -= 10
 		$Teleport/Sprite.position.x = -144
+		$Teleport/TeleportTrigger/CollisionShape2D.position.x = -72
 		direction = -1
+	
 		if !is_on_floor():
 			$Sprite.flip_h = true
 			$Teleport/Sprite.flip_h = true
@@ -50,33 +53,22 @@ func get_input():
 
 func _input(event):
 	if event is InputEventKey:
-		
-		
-		if event.is_pressed() && event.scancode == KEY_ENTER:
-			$Teleport/Sprite.set_deferred("visible", true)
-		
-		
-		elif event.is_echo() && event.scancode == KEY_ENTER && can_teleport == true:
-			$Teleport/Sprite.set_deferred("visible", false)
-			global_position.x = global_position.x + (144 * direction)
+		if event.scancode == KEY_ENTER:
+			if event.is_pressed():
+				$Teleport/Sprite.show()       
+			else:
+				if can_teleport == true:
+					$Teleport/Sprite.hide()
+					global_position.x += 144 * direction
+				else:
+					$Teleport/Sprite.hide()
+
 
 func _on_TeleportTrigger_body_entered(body):
 	can_teleport = false
 
 func _on_TeleportTrigger_body_exited(body):
 	can_teleport = true
-
-#func teleport():
-#
-#	if Input.is_action_pressed("Teleport2player"):
-#		#global_position.x = global_position.x + (144 * direction)
-#		$Teleport/Sprite.set_deferred("visible", true)
-#	elif button_pressed == true:
-#		$Teleport/Sprite.set_deferred("visible", false)
-#		global_position.x = global_position.x + (144 * direction)
-#	else:
-#		$Teleport/Sprite.set_deferred("visible", false)
-
 
 
 func _on_Transfer_body_entered(body):

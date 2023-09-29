@@ -84,6 +84,11 @@ Player3jump={
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":85,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
  ]
 }
+Player3Shoot={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":73,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
 
 [layer_names]
 
@@ -117,6 +122,8 @@ Player3jump={
 2d_physics/layer_28="BlueKey"
 2d_physics/layer_29="YellowKey"
 2d_physics/layer_30="ReachingTheNextLevel"
+2d_physics/layer_31="Target"
+2d_physics/layer_32="Bullet"
 
 [physics]
 
